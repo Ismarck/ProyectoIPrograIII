@@ -2,15 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Modelo;
+package Controlador;
 
 /**
  *
  * @author marcosisaacarayaabarca
  */
-public class Sucursal {
-    private String Provincia;
-    private String Canton;
-    private int Codigo;
+public class ControladorSucursal {
     
 }
