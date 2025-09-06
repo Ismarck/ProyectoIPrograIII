@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Modelo;
 
 /**
@@ -13,7 +9,7 @@ public class Ejercicio {
     private String Nombre;
     private String Area_de_Ejercicio;
     private String Descripcion;
-    
+
     public Ejercicio() {
     }
 
