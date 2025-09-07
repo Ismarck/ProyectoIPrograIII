@@ -5,26 +5,64 @@
 package Controlador;
 import Modelo.Instructor;
 import java.util.AbstractList;
-import java.util.list;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
  * @author marcosisaacarayaabarca
  */
+
 public class Controlador_Instructor {
     
-    /*private List<Instructor> lista;
+    private List<Instructor> lista;
 
-    public Controlador_Instructor(List lista) {
+    public Controlador_Instructor(List<Instructor> lista) {
         this.lista = lista;
-    }*/
-    
+    }
+  
     //Insertar Instructor
+    public boolean Insertar_Instructor(Instructor t){
+        if(Buscar_Instructor(t.getCedula()) != null){
+        return false;
+        }
+        lista.add(t);
+        return true;
+    }
     //Modificar Instructor
+    public boolean Modificar_Instructor(Instructor nuevo) {
+        for (int i = 0; i < lista.size(); i++) {
+            Instructor actual = lista.get(i);
+            if (actual.getCedula() == nuevo.getCedula()) {
+                lista.set(i, nuevo);
+                return true;
+            }
+        }
+        return false;
+    }
     //Eliminar Instructor
+    public boolean Eliminar_Instructor(int Cedula){
+        for(Instructor ins:lista){
+            if(ins.getCedula() == Cedula){
+                lista.remove(ins);
+                return true;
+            }
+        }
+        return false;
+    }
     //Buscar Instructor
+    public Instructor Buscar_Instructor(int Cedula) {
+        for (Instructor ins : lista) {
+            if (ins.getCedula() == Cedula) {
+                return ins;
+            }
+        }
+        return null;
+    }
     //Listar Instructor
-    
+    public List<Instructor> Listar_Instructor(){
+        return new ArrayList<>(lista);
+    }
     
     
     

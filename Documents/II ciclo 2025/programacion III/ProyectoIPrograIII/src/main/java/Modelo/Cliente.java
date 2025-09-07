@@ -53,7 +53,7 @@ public class Cliente extends Persona {
             'M'            
         );
 
-        System.out.println(cliente1.toString());
+        System.out.println(cliente1.Datos());
     }
     
 }

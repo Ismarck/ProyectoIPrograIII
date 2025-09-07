@@ -25,8 +25,30 @@ public class Instructor extends Persona {
     }
 
     @Override
-    protected String Datos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public String Datos() {
+       return "Instructor {" +
+           "Cedula=" + getCedula() +
+           ", Nombre=" + getNombre() +  
+           ", Sexo=" + getSexo() +
+           ", Fecha_Nacimiento='" + getFecha_Nacimiento() + '\'' +
+           ", Correo='" + getCorreo() + '\'' +
+           ", Numero_Celular=" + getNumero_Celular() +
+           ", Especialidad='" + getEspecialidad() + '\'' +
+               
+           '}';
     }
-
+    public static void main(String[] args) 
+    {
+        Instructor instructor1 = new Instructor(
+        "CrossFit",
+         "Benji",
+        "2000-12-07",
+        "benjacol@gmail.com",
+        88776655,
+        123456789,
+        'M'
+        );
+        
+        System.out.println(instructor1.Datos());
+    }
 }
