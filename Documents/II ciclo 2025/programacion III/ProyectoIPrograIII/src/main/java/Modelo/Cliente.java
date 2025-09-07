@@ -1,5 +1,6 @@
 package Modelo;
 
+
 /**
  *
  * @author marcosisaacarayaabarca
@@ -8,6 +9,7 @@ public class Cliente extends Persona {
 
 
     private String Fecha_Inscripcion;
+    private Instructor InstructorAsignado;
 
     public Cliente() {
     }
@@ -25,7 +27,9 @@ public class Cliente extends Persona {
     public void setFecha_Inscripcion(String Fecha_Inscripcion) {
         this.Fecha_Inscripcion = Fecha_Inscripcion;
     }
-  public String toString() {
+    
+    @Override
+    public String Datos() {
     return "Cliente {" +
            "Cedula=" + getCedula() +
            ", Nombre=" + getNombre() +  
@@ -35,11 +39,8 @@ public class Cliente extends Persona {
            ", Numero_Celular=" + getNumero_Celular() +
            ", Fecha_Inscripcion='" + Fecha_Inscripcion + '\'' +
            '}';
-}
-    @Override
-    protected String Datos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
     public static void main(String[] args) {
         Cliente cliente1 = new Cliente(
                 

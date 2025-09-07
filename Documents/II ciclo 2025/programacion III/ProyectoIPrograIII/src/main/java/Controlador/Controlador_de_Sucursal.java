@@ -8,6 +8,6 @@ package Controlador;
  *
  * @author marcosisaacarayaabarca
  */
-public class ControladorSucursal {
+public class Controlador_de_Sucursal {
     
 }
