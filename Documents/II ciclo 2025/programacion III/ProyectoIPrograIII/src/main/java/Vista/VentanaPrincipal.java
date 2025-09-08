@@ -58,8 +58,8 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         appnombre = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         Principal = new javax.swing.JButton();
-        Principal1 = new javax.swing.JButton();
-        Principal2 = new javax.swing.JButton();
+        Usuario = new javax.swing.JButton();
+        Registro = new javax.swing.JButton();
         Principal3 = new javax.swing.JButton();
         Principal4 = new javax.swing.JButton();
         Principal5 = new javax.swing.JButton();
@@ -70,21 +70,12 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         Desarrollo = new javax.swing.JPanel();
         Mensaje_Bienvenida = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Menu.setBackground(new java.awt.Color(0, 102, 255));
         Menu.setPreferredSize(new java.awt.Dimension(270, 640));
 
-        appnombre.setFont(new java.awt.Font("Devanagari MT", 3, 14)); // NOI18N
+        appnombre.setFont(new java.awt.Font("Devanagari MT", 3, 24)); // NOI18N
         appnombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         appnombre.setText("POWERLAB");
 
@@ -94,6 +85,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
 
         Principal.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Principal.setForeground(new java.awt.Color(255, 255, 255));
+        Principal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/home-outline.png"))); // NOI18N
         Principal.setText("Principal");
         Principal.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Principal.setBorderPainted(false);
@@ -101,23 +93,34 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         Principal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Principal.setIconTextGap(10);
 
-        Principal1.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
-        Principal1.setForeground(new java.awt.Color(255, 255, 255));
-        Principal1.setText("Principal");
-        Principal1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        Principal1.setBorderPainted(false);
-        Principal1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Principal1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Principal1.setIconTextGap(10);
+        Usuario.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
+        Usuario.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/user_icon_150670.png"))); // NOI18N
+        Usuario.setText("Usuario");
+        Usuario.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        Usuario.setBorderPainted(false);
+        Usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Usuario.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        Usuario.setIconTextGap(10);
+        Usuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsuarioActionPerformed(evt);
+            }
+        });
 
-        Principal2.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
-        Principal2.setForeground(new java.awt.Color(255, 255, 255));
-        Principal2.setText("Principal");
-        Principal2.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        Principal2.setBorderPainted(false);
-        Principal2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Principal2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        Principal2.setIconTextGap(10);
+        Registro.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
+        Registro.setForeground(new java.awt.Color(255, 255, 255));
+        Registro.setText("Registro");
+        Registro.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        Registro.setBorderPainted(false);
+        Registro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Registro.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        Registro.setIconTextGap(10);
+        Registro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistroActionPerformed(evt);
+            }
+        });
 
         Principal3.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Principal3.setForeground(new java.awt.Color(255, 255, 255));
@@ -136,6 +139,11 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         Principal4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Principal4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Principal4.setIconTextGap(10);
+        Principal4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Principal4ActionPerformed(evt);
+            }
+        });
 
         Principal5.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Principal5.setForeground(new java.awt.Color(255, 255, 255));
@@ -151,41 +159,38 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         MenuLayout.setHorizontalGroup(
             MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuLayout.createSequentialGroup()
-                .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(appnombre, javax.swing.GroupLayout.DEFAULT_SIZE, 258, Short.MAX_VALUE))
-                    .addGroup(MenuLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jSeparator1)))
-                .addContainerGap())
-            .addComponent(Principal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Principal1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Principal2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Principal3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Principal4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(Principal5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(6, 6, 6)
+                .addComponent(appnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(MenuLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Registro, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Principal3, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Principal4, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Principal5, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         MenuLayout.setVerticalGroup(
             MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(appnombre)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(6, 6, 6)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Principal1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Principal2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(20, 20, 20)
+                .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(MenuLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(Registro, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(Principal3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, 0)
                 .addComponent(Principal4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Principal5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGap(0, 0, 0)
+                .addComponent(Principal5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         Encabezado.setBackground(new java.awt.Color(51, 153, 255));
@@ -194,7 +199,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         mensaje1.setBackground(new java.awt.Color(51, 51, 51));
         mensaje1.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         mensaje1.setForeground(new java.awt.Color(0, 0, 0));
-        mensaje1.setText("Administracion Sistema");
+        mensaje1.setText("Administracion del Sistema del Gimnasio");
 
         mensaje2.setFont(new java.awt.Font("Didot", 2, 18)); // NOI18N
         mensaje2.setForeground(new java.awt.Color(0, 0, 0));
@@ -210,7 +215,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
             .addGroup(EncabezadoLayout.createSequentialGroup()
                 .addGap(42, 42, 42)
                 .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(EncabezadoLayout.createSequentialGroup()
                         .addComponent(mensaje2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -256,12 +261,12 @@ public class VentanaPrincipal extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addComponent(Desarrollo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(Encabezado, javax.swing.GroupLayout.DEFAULT_SIZE, 430, Short.MAX_VALUE)))
+                    .addComponent(Encabezado, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Mensaje_Bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 96, Short.MAX_VALUE))
+                .addGap(0, 179, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -274,11 +279,23 @@ public class VentanaPrincipal extends javax.swing.JPanel {
                         .addGap(147, 147, 147)
                         .addComponent(Desarrollo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(Encabezado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, 444, Short.MAX_VALUE)
+            .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE)
         );
 
         Mensaje_Bienvenida.getAccessibleContext().setAccessibleName("Bienvenida");
     }// </editor-fold>//GEN-END:initComponents
+
+    private void UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UsuarioActionPerformed
+
+    private void Principal4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Principal4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Principal4ActionPerformed
+
+    private void RegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegistroActionPerformed
     
     //configuracion estilos letras
     private void initStyles(){
@@ -303,11 +320,11 @@ public class VentanaPrincipal extends javax.swing.JPanel {
     private javax.swing.JLabel Mensaje_Bienvenida;
     private javax.swing.JPanel Menu;
     private javax.swing.JButton Principal;
-    private javax.swing.JButton Principal1;
-    private javax.swing.JButton Principal2;
     private javax.swing.JButton Principal3;
     private javax.swing.JButton Principal4;
     private javax.swing.JButton Principal5;
+    private javax.swing.JButton Registro;
+    private javax.swing.JButton Usuario;
     private javax.swing.JLabel appnombre;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
