@@ -116,7 +116,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         Registro.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Registro.setForeground(new java.awt.Color(255, 255, 255));
         Registro.setIcon(new javax.swing.ImageIcon("/Users/marcosisaacarayaabarca/Documents/thefreeforty_register_icon-icons.com_66338.png")); // NOI18N
-        Registro.setText("Registro");
+        Registro.setText("Registros");
         Registro.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Registro.setBorderPainted(false);
         Registro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
