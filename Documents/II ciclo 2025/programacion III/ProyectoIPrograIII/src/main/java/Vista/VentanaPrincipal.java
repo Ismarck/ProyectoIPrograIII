@@ -131,6 +131,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
 
         Registro.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Registro.setForeground(new java.awt.Color(255, 255, 255));
+        Registro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/registroico.jpg"))); // NOI18N
         Registro.setText("Registros");
         Registro.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Registro.setBorderPainted(false);
@@ -145,6 +146,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
 
         Medicion.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Medicion.setForeground(new java.awt.Color(255, 255, 255));
+        Medicion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/waist_measurement_icon_224826.png"))); // NOI18N
         Medicion.setText("Medicion");
         Medicion.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Medicion.setBorderPainted(false);
@@ -154,6 +156,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
 
         Ejercicio.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Ejercicio.setForeground(new java.awt.Color(255, 255, 255));
+        Ejercicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/ejercicioico.jpg"))); // NOI18N
         Ejercicio.setText("Ejercicio");
         Ejercicio.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Ejercicio.setBorderPainted(false);
@@ -168,6 +171,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
 
         Salida.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Salida.setForeground(new java.awt.Color(255, 255, 255));
+        Salida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/salirico.jpg"))); // NOI18N
         Salida.setText("Salir");
         Salida.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Salida.setBorderPainted(false);
@@ -252,7 +256,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
                 .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(mensaje2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         Desarrollo.setBackground(new java.awt.Color(204, 204, 204));
