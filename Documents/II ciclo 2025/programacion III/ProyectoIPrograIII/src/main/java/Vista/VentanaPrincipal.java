@@ -110,7 +110,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         Principal.setText("Principal");
         Principal.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Principal.setBorderPainted(false);
-        Principal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Principal.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Principal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Principal.setIconTextGap(10);
 
@@ -120,7 +120,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         Usuario.setText("Usuario");
         Usuario.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Usuario.setBorderPainted(false);
-        Usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Usuario.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Usuario.setIconTextGap(10);
         Usuario.addActionListener(new java.awt.event.ActionListener() {
@@ -131,11 +131,10 @@ public class VentanaPrincipal extends javax.swing.JPanel {
 
         Registro.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Registro.setForeground(new java.awt.Color(255, 255, 255));
-        Registro.setIcon(new javax.swing.ImageIcon("/Users/marcosisaacarayaabarca/Documents/thefreeforty_register_icon-icons.com_66338.png")); // NOI18N
         Registro.setText("Registros");
         Registro.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Registro.setBorderPainted(false);
-        Registro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Registro.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Registro.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Registro.setIconTextGap(10);
         Registro.addActionListener(new java.awt.event.ActionListener() {
@@ -146,21 +145,19 @@ public class VentanaPrincipal extends javax.swing.JPanel {
 
         Medicion.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Medicion.setForeground(new java.awt.Color(255, 255, 255));
-        Medicion.setIcon(new javax.swing.ImageIcon("/Users/marcosisaacarayaabarca/Documents/waist_measurement_icon_224826.png")); // NOI18N
         Medicion.setText("Medicion");
         Medicion.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Medicion.setBorderPainted(false);
-        Medicion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Medicion.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Medicion.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Medicion.setIconTextGap(10);
 
         Ejercicio.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Ejercicio.setForeground(new java.awt.Color(255, 255, 255));
-        Ejercicio.setIcon(new javax.swing.ImageIcon("/Users/marcosisaacarayaabarca/Documents/exercise_dumbbells_gym_fitness_diet_icon_149053.png")); // NOI18N
         Ejercicio.setText("Ejercicio");
         Ejercicio.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Ejercicio.setBorderPainted(false);
-        Ejercicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Ejercicio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Ejercicio.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Ejercicio.setIconTextGap(10);
         Ejercicio.addActionListener(new java.awt.event.ActionListener() {
@@ -171,11 +168,10 @@ public class VentanaPrincipal extends javax.swing.JPanel {
 
         Salida.setFont(new java.awt.Font("Silom", 0, 14)); // NOI18N
         Salida.setForeground(new java.awt.Color(255, 255, 255));
-        Salida.setIcon(new javax.swing.ImageIcon("/Users/marcosisaacarayaabarca/Documents/log-out_icon-icons.com_50106.png")); // NOI18N
         Salida.setText("Salir");
         Salida.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         Salida.setBorderPainted(false);
-        Salida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Salida.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Salida.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Salida.setIconTextGap(10);
 
@@ -256,7 +252,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
                 .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(mensaje2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         Desarrollo.setBackground(new java.awt.Color(204, 204, 204));
