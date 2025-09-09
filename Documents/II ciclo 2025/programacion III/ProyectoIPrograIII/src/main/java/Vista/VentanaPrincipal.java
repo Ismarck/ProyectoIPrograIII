@@ -4,6 +4,8 @@
  */
 package Vista;
 
+import Vista.presentacion.Texto;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -22,6 +24,7 @@ public class VentanaPrincipal extends javax.swing.JPanel {
         initComponents();
         initStyles();
         SetDate();
+        initContent();
     }
 
     /**
@@ -40,6 +43,17 @@ public class VentanaPrincipal extends javax.swing.JPanel {
     Fecha.setText("Hoy es: " + dia+ " de " + meses[month - 1]+ " de "+ year);
     }
     
+    public void initContent(){
+    Texto tx = new Texto();
+    tx.setSize(781,560);
+    tx.setLocation(0,0);
+    
+    Desarrollo.removeAll();
+    Desarrollo.add(tx, BorderLayout.CENTER);
+    Desarrollo.revalidate();
+    Desarrollo.repaint();
+    }
+    
     public static void main(String args[]){
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
         public void run() {
@@ -54,6 +68,8 @@ public class VentanaPrincipal extends javax.swing.JPanel {
      
         
     }
+    
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -270,12 +286,12 @@ public class VentanaPrincipal extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addComponent(Desarrollo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(Encabezado, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)))
+                    .addComponent(Encabezado, javax.swing.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Mensaje_Bienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 315, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 179, Short.MAX_VALUE))
+                .addGap(0, 178, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
