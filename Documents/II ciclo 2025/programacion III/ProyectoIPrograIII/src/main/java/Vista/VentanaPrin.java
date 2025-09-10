@@ -195,6 +195,11 @@ public class VentanaPrin extends javax.swing.JFrame {
         Salida.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Salida.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         Salida.setIconTextGap(10);
+        Salida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalidaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout MenuLayout = new javax.swing.GroupLayout(Menu);
         Menu.setLayout(MenuLayout);
@@ -337,6 +342,11 @@ public class VentanaPrin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_EjercicioActionPerformed
 
+    private void SalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalidaActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_SalidaActionPerformed
+    
+    
     /**
      * @param args the command line arguments
      */

@@ -18,7 +18,8 @@ public class PanelRegistro extends javax.swing.JPanel {
      */
     public PanelRegistro() {
         initComponents();
-
+        RegistroCliente p1 = new RegistroCliente();
+        ShowPanel(p1);
     }
 
     private void ShowPanel(JPanel p) {
@@ -30,6 +31,8 @@ public class PanelRegistro extends javax.swing.JPanel {
         Mostrar.repaint();
 
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -45,39 +48,56 @@ public class PanelRegistro extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        Mostrar = new javax.swing.JPanel();
-        Cliente = new javax.swing.JButton();
         Instructor = new javax.swing.JButton();
         Sucursal = new javax.swing.JButton();
+        Cliente = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Mostrar = new javax.swing.JPanel();
 
         jLabel3.setText("jLabel3");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/WhatsApp Image 2025-09-09 at 8.09.41 PM.jpeg"))); // NOI18N
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/WhatsApp Image 2025-09-09 at 10.44.24 PM.jpeg"))); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(765, 404));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 247, 1253));
 
         jLabel2.setFont(new java.awt.Font("DIN Condensed", 2, 48)); // NOI18N
         jLabel2.setText("REGISTRO");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 17, 216, 68));
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 73, 519, -1));
 
-        Cliente.setText("jButton1");
-        Cliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ClienteActionPerformed(evt);
-            }
-        });
-
-        Instructor.setText("jButton2");
+        Instructor.setText("Registro Instructor");
         Instructor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 InstructorActionPerformed(evt);
             }
         });
+        jPanel1.add(Instructor, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, -1, -1));
 
-        Sucursal.setText("jButton2");
+        Sucursal.setText("Registro Sucursal");
         Sucursal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SucursalActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Sucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
+
+        Cliente.setText("Registro Cliente");
+        Cliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClienteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, -1, -1));
+
+        jScrollPane1.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                jScrollPane1ComponentAdded(evt);
             }
         });
 
@@ -85,79 +105,19 @@ public class PanelRegistro extends javax.swing.JPanel {
         Mostrar.setLayout(MostrarLayout);
         MostrarLayout.setHorizontalGroup(
             MostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MostrarLayout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addComponent(Cliente)
-                .addGap(131, 131, 131)
-                .addComponent(Instructor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
-                .addComponent(Sucursal)
-                .addGap(89, 89, 89))
+            .addGap(0, 476, Short.MAX_VALUE)
         );
         MostrarLayout.setVerticalGroup(
             MostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MostrarLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(MostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cliente)
-                    .addComponent(Instructor)
-                    .addComponent(Sucursal))
-                .addContainerGap(526, Short.MAX_VALUE))
+            .addGap(0, 376, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 519, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(Mostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(187, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(17, 17, 17)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Mostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jScrollPane1.setViewportView(Mostrar);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 188, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 774, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 460, 380));
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, 1560, 700));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClienteActionPerformed
-        
-    }//GEN-LAST:event_ClienteActionPerformed
 
     private void InstructorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InstructorActionPerformed
          RegistroInstructor p1 = new RegistroInstructor();
@@ -165,8 +125,18 @@ public class PanelRegistro extends javax.swing.JPanel {
     }//GEN-LAST:event_InstructorActionPerformed
 
     private void SucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SucursalActionPerformed
-        // TODO add your handling code here:
+        RegistroSucursal p1 = new RegistroSucursal();
+        ShowPanel(p1);
     }//GEN-LAST:event_SucursalActionPerformed
+
+    private void ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClienteActionPerformed
+        RegistroCliente p1 = new RegistroCliente();
+        ShowPanel(p1);
+    }//GEN-LAST:event_ClienteActionPerformed
+
+    private void jScrollPane1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jScrollPane1ComponentAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jScrollPane1ComponentAdded
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -178,6 +148,7 @@ public class PanelRegistro extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

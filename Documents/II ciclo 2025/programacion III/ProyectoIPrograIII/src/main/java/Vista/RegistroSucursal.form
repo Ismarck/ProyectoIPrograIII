@@ -145,7 +145,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Khmer MN" size="18" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="REGISTRO INSTRUCTOR"/>
+                <Property name="text" type="java.lang.String" value="REGISTRO SUCURSAL"/>
               </Properties>
             </Component>
           </SubComponents>
