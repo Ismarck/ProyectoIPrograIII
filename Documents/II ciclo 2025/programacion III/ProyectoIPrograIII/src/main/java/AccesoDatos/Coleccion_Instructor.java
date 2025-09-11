@@ -2,7 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Controlador;
+package AccesoDatos;
+import Controlador.*;
 import Modelo.Instructor;
 import java.util.AbstractList;
 import java.util.ArrayList;
@@ -13,12 +14,11 @@ import java.util.List;
  * @author marcosisaacarayaabarca
  */
 
-public class Controlador_Instructor {
-    /*
+public class Coleccion_Instructor {
     
     private List<Instructor> lista;
 
-    public Controlador_Instructor(List<Instructor> lista) {
+    public Coleccion_Instructor(List<Instructor> lista) {
         this.lista = lista;
     }
   
@@ -64,7 +64,7 @@ public class Controlador_Instructor {
     public List<Instructor> Listar_Instructor(){
         return new ArrayList<>(lista);
     }
-    */
+    
     
     
 }

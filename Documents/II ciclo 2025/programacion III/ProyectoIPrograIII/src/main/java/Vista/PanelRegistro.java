@@ -18,8 +18,8 @@ public class PanelRegistro extends javax.swing.JPanel {
      */
     public PanelRegistro() {
         initComponents();
-        RegistroCliente p1 = new RegistroCliente();
-        ShowPanel(p1);
+        //RegistroCliente p1 = new RegistroCliente(controladorCliente);
+        //ShowPanel(p1);
     }
 
     private void ShowPanel(JPanel p) {
@@ -130,8 +130,8 @@ public class PanelRegistro extends javax.swing.JPanel {
     }//GEN-LAST:event_SucursalActionPerformed
 
     private void ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClienteActionPerformed
-        RegistroCliente p1 = new RegistroCliente();
-        ShowPanel(p1);
+        //RegistroCliente p1 = new RegistroCliente(controladorCliente);
+        //ShowPanel(p1);
     }//GEN-LAST:event_ClienteActionPerformed
 
     private void jScrollPane1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jScrollPane1ComponentAdded

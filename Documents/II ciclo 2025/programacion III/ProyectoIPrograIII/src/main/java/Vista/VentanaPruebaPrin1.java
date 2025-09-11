@@ -4,11 +4,9 @@
  */
 package Vista;
 
-import Controlador.Controlador_Cliente;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import javax.swing.JPanel;
 
 
@@ -16,23 +14,20 @@ import javax.swing.JPanel;
  *
  * @author marcosisaacarayaabarca
  */
-public class VentanaPrin extends javax.swing.JFrame {
+public class VentanaPruebaPrin1 extends javax.swing.JFrame {
 
     /**
      * Creates new form VentanaPrin
      */
-    public VentanaPrin() {
+    public VentanaPruebaPrin1() {
         initComponents();
         initStyles();
         SetDate();
         initContent();
-        controladorCliente = new Controlador_Cliente(new ArrayList<>());
         PanelBienvenida p1 = new PanelBienvenida();
         //PanelUsuario p1 = new PanelUsuario();
         ShowPanel(p1);
     }
-    
-    private Controlador_Cliente controladorCliente;
     
     public void SetDate() {
         LocalDate now = LocalDate.now();
@@ -95,6 +90,12 @@ public class VentanaPrin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Encabezado = new javax.swing.JPanel();
+        mensaje1 = new javax.swing.JLabel();
+        mensaje2 = new javax.swing.JLabel();
+        Fecha1 = new javax.swing.JLabel();
+        Mensaje_Bienvenida = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
         Menu = new javax.swing.JPanel();
         appnombre = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -104,15 +105,60 @@ public class VentanaPrin extends javax.swing.JFrame {
         Medicion = new javax.swing.JButton();
         Ejercicio = new javax.swing.JButton();
         Salida = new javax.swing.JButton();
-        Encabezado = new javax.swing.JPanel();
-        mensaje1 = new javax.swing.JLabel();
-        mensaje2 = new javax.swing.JLabel();
-        Fecha1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
         Desarrollo = new javax.swing.JPanel();
-        Mensaje_Bienvenida = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(830, 537));
+
+        Encabezado.setBackground(new java.awt.Color(51, 153, 255));
+        Encabezado.setPreferredSize(new java.awt.Dimension(750, 150));
+
+        mensaje1.setBackground(new java.awt.Color(51, 51, 51));
+        mensaje1.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
+        mensaje1.setForeground(new java.awt.Color(0, 0, 0));
+        mensaje1.setText("Sistema del Gimnasio");
+
+        mensaje2.setFont(new java.awt.Font("Didot", 2, 18)); // NOI18N
+        mensaje2.setForeground(new java.awt.Color(0, 0, 0));
+        mensaje2.setText("Fecha:  ");
+
+        Fecha1.setFont(new java.awt.Font("Gujarati MT", 2, 24)); // NOI18N
+        Fecha1.setText("jLabel1");
+
+        javax.swing.GroupLayout EncabezadoLayout = new javax.swing.GroupLayout(Encabezado);
+        Encabezado.setLayout(EncabezadoLayout);
+        EncabezadoLayout.setHorizontalGroup(
+            EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EncabezadoLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(EncabezadoLayout.createSequentialGroup()
+                        .addComponent(mensaje1, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
+                        .addGap(276, 276, 276))
+                    .addGroup(EncabezadoLayout.createSequentialGroup()
+                        .addComponent(mensaje2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Fecha1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(12, 12, 12))))
+        );
+        EncabezadoLayout.setVerticalGroup(
+            EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EncabezadoLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(mensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(mensaje2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Fecha1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+
+        Mensaje_Bienvenida.setFont(new java.awt.Font("Devanagari MT", 1, 18)); // NOI18N
+        Mensaje_Bienvenida.setText("BIENVENIDOS A POWERLAB");
+        Mensaje_Bienvenida.setToolTipText("");
+
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 
         Menu.setBackground(new java.awt.Color(0, 102, 255));
         Menu.setPreferredSize(new java.awt.Dimension(270, 640));
@@ -226,17 +272,20 @@ public class VentanaPrin extends javax.swing.JFrame {
         MenuLayout.setHorizontalGroup(
             MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuLayout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(appnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(MenuLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(Registro, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(Medicion, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(Ejercicio, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(MenuLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Principal, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Registro, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Medicion, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Ejercicio, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(MenuLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(appnombre, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         MenuLayout.setVerticalGroup(
             MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -260,48 +309,7 @@ public class VentanaPrin extends javax.swing.JFrame {
                 .addComponent(Salida, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        Encabezado.setBackground(new java.awt.Color(51, 153, 255));
-        Encabezado.setPreferredSize(new java.awt.Dimension(750, 150));
-
-        mensaje1.setBackground(new java.awt.Color(51, 51, 51));
-        mensaje1.setFont(new java.awt.Font("Dialog", 3, 24)); // NOI18N
-        mensaje1.setForeground(new java.awt.Color(0, 0, 0));
-        mensaje1.setText("Sistema del Gimnasio");
-
-        mensaje2.setFont(new java.awt.Font("Didot", 2, 18)); // NOI18N
-        mensaje2.setForeground(new java.awt.Color(0, 0, 0));
-        mensaje2.setText("Fecha:  ");
-
-        Fecha1.setFont(new java.awt.Font("Gujarati MT", 2, 24)); // NOI18N
-        Fecha1.setText("jLabel1");
-
-        javax.swing.GroupLayout EncabezadoLayout = new javax.swing.GroupLayout(Encabezado);
-        Encabezado.setLayout(EncabezadoLayout);
-        EncabezadoLayout.setHorizontalGroup(
-            EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EncabezadoLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(EncabezadoLayout.createSequentialGroup()
-                        .addComponent(mensaje1, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)
-                        .addGap(276, 276, 276))
-                    .addGroup(EncabezadoLayout.createSequentialGroup()
-                        .addComponent(mensaje2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Fecha1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(12, 12, 12))))
-        );
-        EncabezadoLayout.setVerticalGroup(
-            EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EncabezadoLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(mensaje1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(EncabezadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(mensaje2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Fecha1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
+        jScrollPane1.setViewportView(Menu);
 
         Desarrollo.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -309,40 +317,41 @@ public class VentanaPrin extends javax.swing.JFrame {
         Desarrollo.setLayout(DesarrolloLayout);
         DesarrolloLayout.setHorizontalGroup(
             DesarrolloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 603, Short.MAX_VALUE)
         );
         DesarrolloLayout.setVerticalGroup(
             DesarrolloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 295, Short.MAX_VALUE)
         );
 
-        Mensaje_Bienvenida.setFont(new java.awt.Font("Devanagari MT", 1, 18)); // NOI18N
-        Mensaje_Bienvenida.setText("BIENVENIDOS A POWERLAB");
-        Mensaje_Bienvenida.setToolTipText("");
+        jScrollPane2.setViewportView(Desarrollo);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Menu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(Mensaje_Bienvenida))
-                    .addComponent(Encabezado, javax.swing.GroupLayout.DEFAULT_SIZE, 856, Short.MAX_VALUE)
-                    .addComponent(Desarrollo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(Mensaje_Bienvenida)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(Encabezado, javax.swing.GroupLayout.DEFAULT_SIZE, 602, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Menu, javax.swing.GroupLayout.DEFAULT_SIZE, 614, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(Mensaje_Bienvenida)
                 .addGap(10, 10, 10)
                 .addComponent(Encabezado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(Desarrollo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -395,20 +404,21 @@ public class VentanaPrin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPruebaPrin1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPruebaPrin1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPruebaPrin1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPruebaPrin1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaPrin().setVisible(true);
+                new VentanaPruebaPrin1().setVisible(true);
             }
         });
     }
@@ -428,6 +438,8 @@ public class VentanaPrin extends javax.swing.JFrame {
     private javax.swing.JButton Salida;
     private javax.swing.JButton Usuario;
     private javax.swing.JLabel appnombre;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel mensaje1;
     private javax.swing.JLabel mensaje2;
