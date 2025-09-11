@@ -4,7 +4,9 @@
  */
 package Vista;
 
-import Controlador.Controlador_Cliente;
+import AccesoDatos.Coleccion_Cliente;
+import AccesoDatos.Coleccion_Instructor;
+import AccesoDatos.Coleccion_Sucursal;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 
@@ -12,16 +14,33 @@ import javax.swing.JPanel;
  *
  * @author marcosisaacarayaabarca
  */
-public class PanelRegistro extends javax.swing.JPanel {
+//public class PanelRegistro extends javax.swing.JPanel {
 
     /**
      * Creates new form PanelRegistro
      */
-    public PanelRegistro(Controlador_Cliente controladorCliente) {
+    /*
+    public PanelRegistro(/*Coleccion_Cliente coleccionCliente Coleccion_Instructor coleccionInstructor) {
     initComponents();
-    this.controladorCliente = controladorCliente;
-    RegistroCliente p1 = new RegistroCliente(controladorCliente);
+    this.coleccionCliente = coleccionCliente;
+    RegistroCliente p1 = new RegistroCliente(coleccionCliente);
     ShowPanel(p1);
+    //this.coleccionInstructor = coleccionInstructor;
+    //ShowPanel(p1);
+    this.coleccionInstructor = coleccionInstructor;
+    //RegistroInstructor p1 = new RegistroInstructor(coleccionInstructor);
+    ShowPanel(p1);
+    }*/
+public class PanelRegistro extends JPanel {
+    private Coleccion_Cliente coleccionCliente;
+    private Coleccion_Instructor coleccionInstructor;
+    private Coleccion_Sucursal coleccionSucursal;
+
+    public PanelRegistro(Coleccion_Cliente coleccionCliente, Coleccion_Instructor coleccionInstructor, Coleccion_Sucursal coleccionSucursal) {
+        initComponents();
+        this.coleccionCliente = coleccionCliente;
+        this.coleccionInstructor = coleccionInstructor;
+        this.coleccionSucursal = coleccionSucursal;
     }
 
 
@@ -35,7 +54,8 @@ public class PanelRegistro extends javax.swing.JPanel {
 
     }
     
-    private Controlador_Cliente controladorCliente;
+    //private Coleccion_Cliente coleccionCliente;
+    //private Coleccion_Instructor coleccionInstructor;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -123,17 +143,17 @@ public class PanelRegistro extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void InstructorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InstructorActionPerformed
-         RegistroInstructor p1 = new RegistroInstructor();
-         ShowPanel(p1);
+        RegistroInstructor p1 = new RegistroInstructor(this.coleccionInstructor);
+        ShowPanel(p1);;
     }//GEN-LAST:event_InstructorActionPerformed
 
     private void SucursalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SucursalActionPerformed
-        RegistroSucursal p1 = new RegistroSucursal();
+        RegistroSucursal p1 = new RegistroSucursal(this.coleccionSucursal);
         ShowPanel(p1);
     }//GEN-LAST:event_SucursalActionPerformed
 
     private void ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClienteActionPerformed
-        RegistroCliente p1 = new RegistroCliente(controladorCliente);
+        RegistroCliente p1 = new RegistroCliente(coleccionCliente);
         ShowPanel(p1);
     }//GEN-LAST:event_ClienteActionPerformed
 
@@ -154,3 +174,4 @@ public class PanelRegistro extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
+

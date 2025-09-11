@@ -4,7 +4,7 @@
  */
 package Vista;
 
-import Controlador.Controlador_Cliente;
+import AccesoDatos.Coleccion_Cliente;
 import Modelo.Cliente;
 import javax.swing.JOptionPane;
 /**
@@ -12,18 +12,15 @@ import javax.swing.JOptionPane;
  * @author marcosisaacarayaabarca
  */
 public class RegistroCliente extends javax.swing.JPanel {
-
+    
+     private Coleccion_Cliente Coleccion;
     /**
      * Creates new form RegistroInstructor
      */
-    public RegistroCliente(Controlador_Cliente Controlador) {
+    public RegistroCliente(Coleccion_Cliente Coleccion) {
         initComponents();
-        this.Controlador = Controlador;
+        this.Coleccion = Coleccion;
     }
-    
-    
-    
-    private Controlador_Cliente Controlador;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -218,10 +215,7 @@ public class RegistroCliente extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    
-
-       
-        
+ 
         try {
             String Nombre = TextoNombre.getText();
             String Fecha_Nacimiento = TextoFechaNAcimiento.getText();
@@ -248,7 +242,7 @@ public class RegistroCliente extends javax.swing.JPanel {
             );
 
             // Insertar con el controlador
-            if (Controlador.Insertar(nuevo)) {
+            if (Coleccion.Insertar(nuevo)) {
                 javax.swing.JOptionPane.showMessageDialog(this, "Cliente registrado con éxito");
             } else {
                 javax.swing.JOptionPane.showMessageDialog(this, "El cliente ya existe");

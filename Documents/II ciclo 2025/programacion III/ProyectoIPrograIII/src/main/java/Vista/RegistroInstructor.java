@@ -3,6 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package Vista;
+import AccesoDatos.Coleccion_Instructor;
+//import Controlador.Controlador_Instructor;
+import Modelo.Instructor;
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
 
 /**
  *
@@ -13,8 +18,14 @@ public class RegistroInstructor extends javax.swing.JPanel {
     /**
      * Creates new form RegistroInstructor
      */
-    public RegistroInstructor() {
+    
+    private Coleccion_Instructor Coleccionins;
+    //private Controlador_Instructor controlador;
+    
+    public RegistroInstructor(Coleccion_Instructor Coleccionins) {
         initComponents();
+         this.Coleccionins = Coleccionins;
+         //this.controlador = controlador;
     }
 
     /**
@@ -28,37 +39,85 @@ public class RegistroInstructor extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        Especialidad = new javax.swing.JLabel();
+        Nombre = new javax.swing.JLabel();
+        FechaNacimiento = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        EspecialidadIns = new javax.swing.JTextField();
+        Nombreins = new javax.swing.JTextField();
+        FechaNacIns = new javax.swing.JTextField();
+        Correoins = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        Celularins = new javax.swing.JTextField();
+        NumeroCelIns = new javax.swing.JLabel();
+        CedulaIns = new javax.swing.JLabel();
+        Especialidad3 = new javax.swing.JLabel();
+        Cedulains = new javax.swing.JTextField();
+        SexoIns = new javax.swing.JTextField();
 
-        jLabel1.setText("Nombre Completo:");
+        Especialidad.setText("Especialidad:");
 
-        jLabel2.setText("Correo");
+        Nombre.setText("Nombre:");
 
-        jLabel3.setText("Especialidad");
+        FechaNacimiento.setText("Fecha Nacimiento:");
 
-        jLabel4.setText("Contraseña");
+        jLabel4.setText("Correo:");
 
-        jTextField1.setText("jTextField1");
+        EspecialidadIns.setText("jTextField1");
 
-        jTextField2.setText("jTextField1");
+        Nombreins.setText("jTextField1");
+        Nombreins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreinsActionPerformed(evt);
+            }
+        });
 
-        jTextField3.setText("jTextField1");
+        FechaNacIns.setText("jTextField1");
+        FechaNacIns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FechaNacInsActionPerformed(evt);
+            }
+        });
 
-        jTextField4.setText("jTextField1");
+        Correoins.setText("jTextField1");
 
         jButton1.setText("Registrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Khmer MN", 0, 18)); // NOI18N
         jLabel5.setText("REGISTRO INSTRUCTOR");
+
+        Celularins.setText("jTextField1");
+        Celularins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CelularinsActionPerformed(evt);
+            }
+        });
+
+        NumeroCelIns.setText("numero Celular:");
+
+        CedulaIns.setText("Cedula:");
+
+        Especialidad3.setText("Sexo:");
+
+        Cedulains.setText("jTextField1");
+        Cedulains.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CedulainsActionPerformed(evt);
+            }
+        });
+
+        SexoIns.setText("jTextField1");
+        SexoIns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SexoInsActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -67,18 +126,30 @@ public class RegistroInstructor extends javax.swing.JPanel {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Nombreins, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(Especialidad, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(EspecialidadIns, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Correoins, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(360, Short.MAX_VALUE))
+                    .addComponent(FechaNacIns, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(NumeroCelIns, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(158, 158, 158))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Celularins, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CedulaIns, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Cedulains, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Especialidad3, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(SexoIns, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,24 +157,36 @@ public class RegistroInstructor extends javax.swing.JPanel {
                 .addGap(24, 24, 24)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Especialidad, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NumeroCelIns, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EspecialidadIns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Celularins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CedulaIns, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(6, 6, 6)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Nombreins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Cedulains, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(FechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Especialidad3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(FechaNacIns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SexoIns, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Correoins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -129,19 +212,80 @@ public class RegistroInstructor extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            try {
+            
+            String nombre = Nombreins.getText().trim();
+            String especialidad = EspecialidadIns.getText().trim();
+            String fechaNacimiento = FechaNacIns.getText().trim();
+            String correo = Correoins.getText().trim();
+            int cedula = Integer.parseInt(Cedulains.getText().trim());
+            int numeroCelular = Integer.parseInt(Celularins.getText().trim());
+            char sexo = SexoIns.getText().trim().isEmpty() ? 'M' : SexoIns.getText().trim().charAt(0);
+
+            // Crear el objeto Cliente
+            Instructor nuevo = new Instructor(
+            especialidad,     
+            nombre,           
+             fechaNacimiento, 
+            correo,           
+            numeroCelular,    
+            cedula,           
+            sexo);
+
+            // Insertar con el controlador
+            if (Coleccionins.Insertar_Instructor(nuevo)) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Instructor registrado con éxito");
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(this, "El Instructor ya existe");
+            }
+
+        } catch (NumberFormatException ex) {
+        javax.swing.JOptionPane.showMessageDialog(this, "El número de celular o cédula no es válido.");
+    } catch (Exception ex) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage());
+    }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void CelularinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CelularinsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CelularinsActionPerformed
+
+    private void FechaNacInsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FechaNacInsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_FechaNacInsActionPerformed
+
+    private void NombreinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreinsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreinsActionPerformed
+
+    private void CedulainsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CedulainsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CedulainsActionPerformed
+
+    private void SexoInsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SexoInsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SexoInsActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CedulaIns;
+    private javax.swing.JTextField Cedulains;
+    private javax.swing.JTextField Celularins;
+    private javax.swing.JTextField Correoins;
+    private javax.swing.JLabel Especialidad;
+    private javax.swing.JLabel Especialidad3;
+    private javax.swing.JTextField EspecialidadIns;
+    private javax.swing.JTextField FechaNacIns;
+    private javax.swing.JLabel FechaNacimiento;
+    private javax.swing.JLabel Nombre;
+    private javax.swing.JTextField Nombreins;
+    private javax.swing.JLabel NumeroCelIns;
+    private javax.swing.JTextField SexoIns;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }

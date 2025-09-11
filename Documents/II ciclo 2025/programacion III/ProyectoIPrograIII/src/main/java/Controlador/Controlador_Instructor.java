@@ -12,7 +12,7 @@ import java.util.List;
  *
  * @author marcosisaacarayaabarca
  */
-
+/*
 public class Controlador_Instructor {
     /*
     
@@ -67,4 +67,34 @@ public class Controlador_Instructor {
     */
     
     
+//}*/
+import AccesoDatos.Coleccion_Instructor;
+
+
+public class Controlador_Instructor {
+    private Coleccion_Instructor coleccion;
+
+    public Controlador_Instructor(Coleccion_Instructor coleccion) {
+        this.coleccion = coleccion;
+    }
+
+    public boolean registrarInstructor(Instructor ins) {
+        return coleccion.Insertar_Instructor(ins);
+    }
+
+    public boolean eliminarInstructor(int cedula) {
+        return coleccion.Eliminar_Instructor(cedula);
+    }
+
+    public Instructor buscarInstructor(int cedula) {
+        return coleccion.Buscar_Instructor(cedula);
+    }
+
+    public boolean modificarInstructor(Instructor ins) {
+        return coleccion.Modificar_Instructor(ins);
+    }
+
+    public java.util.List<Instructor> listar() {
+        return coleccion.Listar_Instructor();
+    }
 }

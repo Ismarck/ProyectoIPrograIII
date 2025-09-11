@@ -4,7 +4,11 @@
  */
 package Vista;
 
+import AccesoDatos.Coleccion_Cliente;
+import AccesoDatos.Coleccion_Instructor;
+import AccesoDatos.Coleccion_Sucursal;
 import Controlador.Controlador_Cliente;
+import Controlador.Controlador_Instructor;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.time.LocalDate;
@@ -21,18 +25,30 @@ public class VentanaPrin extends javax.swing.JFrame {
     /**
      * Creates new form VentanaPrin
      */
+    private Coleccion_Cliente coleccionCliente;
+    private Coleccion_Instructor coleccionInstructor;
+    private Coleccion_Sucursal coleccionSucursal;
+    
+
+    
     public VentanaPrin() {
         initComponents();
         initStyles();
         SetDate();
         initContent();
-        controladorCliente = new Controlador_Cliente(new ArrayList<>());
+        
+          // Inicializo colecciones
+        this.coleccionInstructor = new Coleccion_Instructor(new ArrayList<>());
+        this.coleccionCliente = new Coleccion_Cliente(new ArrayList<>());
+        this.coleccionSucursal = new Coleccion_Sucursal(new ArrayList<>());
+        
+        // Mostrar panel de bienvenida una sola vez
         PanelBienvenida p1 = new PanelBienvenida();
-        //PanelUsuario p1 = new PanelUsuario();
         ShowPanel(p1);
+
     }
     
-    private Controlador_Cliente controladorCliente;
+    
     
     public void SetDate() {
         LocalDate now = LocalDate.now();
@@ -49,17 +65,6 @@ public class VentanaPrin extends javax.swing.JFrame {
         //ShowJPanel(new Registro());
        
     }
-    /*
-    private void ShowJPanel(JPanel tx){
-    //VentanaTexto tx = new VentanaTexto();
-    tx.setSize(500,300);
-    tx.setLocation(0,0);
-    
-    Desarrollo.removeAll();
-    Desarrollo.add(tx, BorderLayout.CENTER);
-    Desarrollo.revalidate();
-    Desarrollo.repaint();
-    }*/
    
      private void ShowPanel(JPanel p){
         p.setSize(1200, 722);
@@ -354,13 +359,10 @@ public class VentanaPrin extends javax.swing.JFrame {
     }//GEN-LAST:event_UsuarioActionPerformed
 
     private void RegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroActionPerformed
-        PanelRegistro p1 = new PanelRegistro(this.controladorCliente);
+        PanelRegistro p1 = new PanelRegistro(this.coleccionCliente, this.coleccionInstructor, this.coleccionSucursal);
         ShowPanel(p1);
-        //Controlador_Cliente controladorCliente = new Controlador_Cliente();
-        //PanelRegistro p1 = new PanelRegistro();
-        //ShowPanel(p1);
     }//GEN-LAST:event_RegistroActionPerformed
-
+        
     private void EjercicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EjercicioActionPerformed
         PanelEjercicio p1 = new PanelEjercicio();
         ShowPanel(p1);
