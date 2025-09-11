@@ -4,6 +4,7 @@
  */
 package Vista;
 
+import Controlador.Controlador_Cliente;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 
@@ -16,11 +17,13 @@ public class PanelRegistro extends javax.swing.JPanel {
     /**
      * Creates new form PanelRegistro
      */
-    public PanelRegistro() {
-        initComponents();
-        //RegistroCliente p1 = new RegistroCliente(controladorCliente);
-        //ShowPanel(p1);
+    public PanelRegistro(Controlador_Cliente controladorCliente) {
+    initComponents();
+    this.controladorCliente = controladorCliente;
+    RegistroCliente p1 = new RegistroCliente(controladorCliente);
+    ShowPanel(p1);
     }
+
 
     private void ShowPanel(JPanel p) {
         p.setSize(600, 600);
@@ -32,7 +35,7 @@ public class PanelRegistro extends javax.swing.JPanel {
 
     }
     
-    
+    private Controlador_Cliente controladorCliente;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -105,16 +108,16 @@ public class PanelRegistro extends javax.swing.JPanel {
         Mostrar.setLayout(MostrarLayout);
         MostrarLayout.setHorizontalGroup(
             MostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 476, Short.MAX_VALUE)
+            .addGap(0, 771, Short.MAX_VALUE)
         );
         MostrarLayout.setVerticalGroup(
             MostrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 376, Short.MAX_VALUE)
+            .addGap(0, 524, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(Mostrar);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 460, 380));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 540, 460));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 6, 1560, 700));
     }// </editor-fold>//GEN-END:initComponents
@@ -130,14 +133,13 @@ public class PanelRegistro extends javax.swing.JPanel {
     }//GEN-LAST:event_SucursalActionPerformed
 
     private void ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClienteActionPerformed
-        //RegistroCliente p1 = new RegistroCliente(controladorCliente);
-        //ShowPanel(p1);
+        RegistroCliente p1 = new RegistroCliente(controladorCliente);
+        ShowPanel(p1);
     }//GEN-LAST:event_ClienteActionPerformed
 
     private void jScrollPane1ComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_jScrollPane1ComponentAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_jScrollPane1ComponentAdded
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Cliente;

@@ -363,8 +363,8 @@ public class VentanaPruebaPrin1 extends javax.swing.JFrame {
     }//GEN-LAST:event_UsuarioActionPerformed
 
     private void RegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroActionPerformed
-        PanelRegistro p1 = new PanelRegistro();
-        ShowPanel(p1);
+        //PanelRegistro p1 = new PanelRegistro();
+        //ShowPanel(p1);
     }//GEN-LAST:event_RegistroActionPerformed
 
     private void EjercicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EjercicioActionPerformed

@@ -354,8 +354,11 @@ public class VentanaPrin extends javax.swing.JFrame {
     }//GEN-LAST:event_UsuarioActionPerformed
 
     private void RegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroActionPerformed
-        PanelRegistro p1 = new PanelRegistro();
+        PanelRegistro p1 = new PanelRegistro(this.controladorCliente);
         ShowPanel(p1);
+        //Controlador_Cliente controladorCliente = new Controlador_Cliente();
+        //PanelRegistro p1 = new PanelRegistro();
+        //ShowPanel(p1);
     }//GEN-LAST:event_RegistroActionPerformed
 
     private void EjercicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EjercicioActionPerformed
