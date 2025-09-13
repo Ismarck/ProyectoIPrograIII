@@ -64,9 +64,6 @@ public class RegistroInstructor extends javax.swing.JPanel {
 
         jLabel4.setText("Correo:");
 
-        EspecialidadIns.setText("jTextField1");
-
-        Nombreins.setText("jTextField1");
         Nombreins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NombreinsActionPerformed(evt);
@@ -80,7 +77,11 @@ public class RegistroInstructor extends javax.swing.JPanel {
             }
         });
 
-        Correoins.setText("jTextField1");
+        Correoins.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CorreoinsActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Registrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,27 +93,24 @@ public class RegistroInstructor extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Khmer MN", 0, 18)); // NOI18N
         jLabel5.setText("REGISTRO INSTRUCTOR");
 
-        Celularins.setText("jTextField1");
         Celularins.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CelularinsActionPerformed(evt);
             }
         });
 
-        NumeroCelIns.setText("numero Celular:");
+        NumeroCelIns.setText("Numero Celular:");
 
         CedulaIns.setText("Cedula:");
 
         Especialidad3.setText("Sexo:");
 
-        Cedulains.setText("jTextField1");
         Cedulains.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CedulainsActionPerformed(evt);
             }
         });
 
-        SexoIns.setText("jTextField1");
         SexoIns.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SexoInsActionPerformed(evt);
@@ -266,6 +264,10 @@ public class RegistroInstructor extends javax.swing.JPanel {
     private void SexoInsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SexoInsActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SexoInsActionPerformed
+
+    private void CorreoinsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CorreoinsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CorreoinsActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

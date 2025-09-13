@@ -65,7 +65,7 @@ public class PanelEjercicio extends javax.swing.JPanel {
 
         jLabel2.setFont(new java.awt.Font("DIN Condensed", 2, 48)); // NOI18N
         jLabel2.setText("EJERCICIOS");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 17, 216, 68));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 17, 300, 68));
 
         jSeparator1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 73, 519, -1));
