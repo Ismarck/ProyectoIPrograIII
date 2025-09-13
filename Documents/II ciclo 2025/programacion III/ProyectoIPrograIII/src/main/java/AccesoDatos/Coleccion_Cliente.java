@@ -63,7 +63,7 @@ public class Coleccion_Cliente {
     }
 
     // Listar Clientes
-    public List<Cliente> listar() {
+    public List<Cliente> Listar() {
         return new ArrayList<>(lista);
     }
 }

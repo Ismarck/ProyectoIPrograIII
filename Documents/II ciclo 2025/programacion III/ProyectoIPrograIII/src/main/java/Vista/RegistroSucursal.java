@@ -36,9 +36,9 @@ public class RegistroSucursal extends javax.swing.JPanel {
         Provincia = new javax.swing.JLabel();
         Canton = new javax.swing.JLabel();
         Codigo = new javax.swing.JLabel();
+        Textcodigo = new javax.swing.JTextField();
         TextProvincia = new javax.swing.JTextField();
         TextCanton = new javax.swing.JTextField();
-        TextCodigo = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         Codigo1 = new javax.swing.JLabel();
@@ -52,11 +52,16 @@ public class RegistroSucursal extends javax.swing.JPanel {
 
         Codigo.setText("Codigo:");
 
+        Textcodigo.setText("jTextField1");
+        Textcodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextcodigoActionPerformed(evt);
+            }
+        });
+
         TextProvincia.setText("jTextField1");
 
         TextCanton.setText("jTextField1");
-
-        TextCodigo.setText("jTextField1");
 
         jButton1.setText("Registrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +78,11 @@ public class RegistroSucursal extends javax.swing.JPanel {
         Provincia1.setText("Provincia");
 
         TextProvincia1.setText("jTextField1");
+        TextProvincia1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TextProvincia1ActionPerformed(evt);
+            }
+        });
 
         TextProvincia2.setText("jTextField1");
 
@@ -85,13 +95,13 @@ public class RegistroSucursal extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1)
-                    .addComponent(TextCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextCanton, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Canton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Codigo, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TextProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TextCanton, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Textcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TextProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(76, 76, 76)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(TextProvincia1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -116,18 +126,18 @@ public class RegistroSucursal extends javax.swing.JPanel {
                     .addComponent(Codigo1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Textcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TextProvincia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Provincia, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TextCanton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TextProvincia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(TextProvincia1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Canton, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TextCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(TextCanton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(jButton1)
                 .addContainerGap(7, Short.MAX_VALUE))
@@ -172,7 +182,7 @@ public class RegistroSucursal extends javax.swing.JPanel {
 
             String Provincia = TextProvincia.getText();
             String Canton = TextCanton.getText();
-            int Codigo = Integer.parseInt(TextCodigo.getText());
+            int Codigo = Integer.parseInt(Textcodigo.getText());
 
             Sucursal nuevo = new Sucursal(
                 Provincia,
@@ -181,9 +191,9 @@ public class RegistroSucursal extends javax.swing.JPanel {
             );
 
             if (Coleccionsuc.Insertar_Sucursal(nuevo)) {
-                javax.swing.JOptionPane.showMessageDialog(this, "Instructor registrado con éxito");
+                javax.swing.JOptionPane.showMessageDialog(this, "Sucursal registrada con éxito");
             } else {
-                javax.swing.JOptionPane.showMessageDialog(this, "El Instructor ya existe");
+                javax.swing.JOptionPane.showMessageDialog(this, "La Sucursal ya existe");
             }
 
         }
@@ -199,6 +209,14 @@ public class RegistroSucursal extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void TextProvincia1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextProvincia1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextProvincia1ActionPerformed
+
+    private void TextcodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextcodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TextcodigoActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -208,10 +226,10 @@ public class RegistroSucursal extends javax.swing.JPanel {
     private javax.swing.JLabel Provincia;
     private javax.swing.JLabel Provincia1;
     private javax.swing.JTextField TextCanton;
-    private javax.swing.JTextField TextCodigo;
     private javax.swing.JTextField TextProvincia;
     private javax.swing.JTextField TextProvincia1;
     private javax.swing.JTextField TextProvincia2;
+    private javax.swing.JTextField Textcodigo;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;

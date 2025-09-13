@@ -4,7 +4,9 @@
  */
 
 package Controlador;
+import AccesoDatos.Coleccion_Cliente;
 import Modelo.Cliente;
+import Modelo.Instructor;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,56 +15,30 @@ import java.util.List;
  * @author marcosisaacarayaabarca
  */
 public class Controlador_Cliente {
-    private List<Cliente> lista;
+    
+    private Coleccion_Cliente coleccionCliente;
 
-    public Controlador_Cliente(List<Cliente> lista) {
-        this.lista = lista;
+    public Controlador_Cliente(Coleccion_Cliente coleccionCliente) {
+        this.coleccionCliente = coleccionCliente;
     }
 
-    // Insertar Cliente
-    public boolean Insertar(Cliente c) {
-        if (buscar(c.getCedula()) != null) {
-            return false;
-        }
-        lista.add(c);
-        return true;
+    public boolean registrar(Cliente c) {
+        return coleccionCliente.Insertar(c);
     }
 
-    // Modificar Cliente por ID
-    public boolean Modificar(Cliente nuevo) {
-        for (int i = 0; i < lista.size(); i++) {
-            Cliente actual = lista.get(i);
-            if (actual.getCedula() == nuevo.getCedula()) {
-                lista.set(i, nuevo);
-                return true;
-            }
-        }
-        return false;
+    public boolean eliminar(int Cedula) {
+        return coleccionCliente.Eliminar(Cedula);
     }
 
-    // Eliminar Cliente por cédula
-    public boolean Eliminar(int cedula) {
-        for (Cliente cli : lista) {
-            if (cli.getCedula() == cedula) {
-                lista.remove(cli);
-                return true;
-            }
-        }
-        return false;
+    public Cliente buscar(int Cedula) {
+        return coleccionCliente.buscar(Cedula);
     }
 
-    // Buscar Cliente por cédula
-    public Cliente buscar(int cedula) {
-        for (Cliente cli : lista) {
-            if (cli.getCedula() == cedula) {
-                return cli;
-            }
-        }
-        return null;
+    public boolean modificar(Cliente c) {
+        return coleccionCliente.Modificar(c);
     }
 
-    // Listar Clientes
-    public List<Cliente> listar() {
-        return new ArrayList<>(lista);
+    public java.util.List<Cliente> listar() {
+        return coleccionCliente.Listar();
     }
 }

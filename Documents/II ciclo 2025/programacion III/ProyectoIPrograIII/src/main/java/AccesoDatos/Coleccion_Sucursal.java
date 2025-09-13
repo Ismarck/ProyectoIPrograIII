@@ -42,7 +42,7 @@ public class Coleccion_Sucursal {
         return false;
     }
     //Eliminar Instructor
-    public boolean Eliminar_Instructor(int Codigo){
+    public boolean Eliminar_Sucursal(int Codigo){
         for(Sucursal ins:lista){
             if(ins.getCodigo() == Codigo){
                 lista.remove(ins);
